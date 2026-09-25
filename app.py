@@ -1,14 +1,3 @@
-"""
-app.py — a simple web UI for the document scan-and-index pipeline.
-
-Run it with:
-    streamlit run app.py
-
-This is a thin UI layer on top of src/pdf_processor.py and
-src/storage_backend.py — no new logic lives here, it just makes the
-existing pipeline clickable instead of CLI-only, which is a much easier
-thing to demo live in an interview.
-"""
 
 import os
 import sys
@@ -52,9 +41,9 @@ st.sidebar.caption(
     "and index the resulting text so it becomes searchable."
 )
 
-# ---------------------------------------------------------------------------
+
 # Main: Upload + edit + process
-# ---------------------------------------------------------------------------
+
 st.title("📄 Document Scan & Index")
 st.write(
     "Upload a PDF, remove pages you don't want archived, optionally attach another "
@@ -140,9 +129,8 @@ if main_file:
 
 st.divider()
 
-# ---------------------------------------------------------------------------
 # Search
-# ---------------------------------------------------------------------------
+
 st.header("🔍 Search indexed documents")
 query = st.text_input("Search by content", placeholder="e.g. invoice, receipt, acknowledgement")
 if st.button("Search") and query:
