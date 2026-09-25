@@ -1,0 +1,11 @@
+streamlit>=1.38
+pypdf>=5.0
+pdf2image>=1.17
+pytesseract>=0.3.10
+reportlab>=4.0
+elasticsearch>=8.0
+pysolr>=3.9
+
+# System-level dependencies (install via apt / brew, not pip):
+#   tesseract-ocr   -> OCR engine used by pytesseract
+#   poppler-utils   -> provides pdftoppm, used by pdf2image
